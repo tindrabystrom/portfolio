@@ -1,4 +1,4 @@
-<!-- Anger att dokumentet är skrivet enligt HTML5. Ingen sluttag -->
+<!-- Anger att dokumentet är skrivet enligt HTML5. -->
 <!DOCTYPE html>
 <!-- <html> är rotelemtet som omfattar hela html-koden. Attributen lang="sv" anger att sidans huvudsakliga språk är svenska. -->
 <html lang="sv">
@@ -6,20 +6,24 @@
  <head>
   <!-- <meta> är ett tomt element som ger information om html-dokuemntet. Attributen charset talar om att dokumentet använder teckenuppsättning utf=8 som har stöd för bland annat å,ä och ö. -->
    <meta charset="utf-8">
-   <!-- <title> agner titeln för webbsidan. -->
+   <!-- <title> agner dokumentets titel som visas på webbläsarens flik. -->
    <title>Sju sorters kakor</title>
  </head>
 <!-- <body> omfattar webbsidans synliga innehåll.-->
   <body>
-    <!-- <header> innehåller webbsidans inleddande innehåll och huvudrubrik.-->
+    <!-- <header> innehåller webbsidans inledande innehåll och huvudrubrik.-->
     <header>
+      <!-- <h1> används för webbsidans huvudrubrik. -->
       <h1>Sju sorters kakor</h1>
+      <!-- <img> visar en bild på webbsidan. Attributnamnet src ger sökvägen till bilden och alt-texten ger en beskrivning av bilden för ökad tillägnglihet.-->
       <img src="assets/images/ingredienser.jpg" alt="Bakingredienser med mjöl, smör och ägg brevdvid en kavel">
+      <!-- <p> anävnds för sidans introducerade textstycke. -->
       <p>Att bjuda på sju sorters kakor är en klassisk svensk fikatradition och syftar på det minsta antalet kaksorter som etiketten tidigare föreskrev att kakfatet ska innehålla. Tanken är att erbjuda ett varierat urval av småkakor så att det finns något för olika smaker: spröda, mjuka, chokladiga, kryddiga och fruktiga kakor. Utöver småkakorna serveras även vetebröd och tårta. Traditionen förknippas ofta med kafferep och högtider men passar lika bra till vardagsfika eller kalas och har funnits sedan 1800-talet.</p>
       <p>På den här sidan finns recept på sju småkakor att prova på!</p>
     </header>
-
+    <!-- <nav> innehåller webbsidans navigationslänkar till olika kakaavsnitt. <ul> skapar en osorterad lista. Varje <li> avänds för varje recept i listan som innehåller <a> elementet för att skapa en klickbar länk. herf visar vilket recept i på sidan länken leder till. -->
     <nav>
+      <!-- <h2> används för navigationens rubrik. -->
      <h2>Välj en kaka</h2>
      <ul>
        <li><a href="#brysselkex">Brysselkex</a></li>
@@ -31,18 +35,20 @@
        <li><a href="#schackrutor">Schackrutor</a></li>
      </ul>
     </nav>
-
+    <!-- <main> innehåller webbsidans huvudsalkiga innehåll, som består av kakrecepten. -->
     <main>
+      <!-- <article> används för att samla -->
       <article id="brysselkex">
         <h2>Brysselkex</h2>
-
+        <!-- <figure> samlar bilden och den tillhörande bildtexten. <figcaption> användas för att ange att bilden är AI-generead. -->
         <figure>
           <img src="assets/images/brysselkex.jpg" alt="Brysselkex med sockerkant">
           <figcaption>AI-genererad bild</figcaption>
         </figure>
-
+        <!-- <p> används för receptets beskrivande text. Ett stycke beskriver kakan och ett separat styckte agner hur många kakor receptet ger. -->
         <p>Brysselkex är klassiska småkakor med vaniljsmak och en dekorativ sockerkant. Kakorna formas som en rulle och skärs i skivor före gräddning.</p>
         <p>Antal: 40 kakor</p>
+        <!-- <h3> används för underubriker inom receptet. Ingredienserna plaveras i en oordnad list med <ul> eftersom de inte behöver följas i en bestämd ordning. Varje <li> innehåller en ingrediens.-->
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g smör</li>
@@ -59,6 +65,7 @@
         </ul>
 
         <h3>Gör så här</h3>
+        <!-- <ol> används för intruktionerna eftersom stegen ska följa en bestämt ordning. Varje <li> innehåller ett steg i receptet. -->
         <ol>
           <li>Sätt ugnen på 175°C</li>
           <li>Hacka samman ingredienserna till degen. Forma degen till rullar, drygt 4 cm i diameter. Häll ut strösocker på ett smörpapper, häll på några droppar röd hushållsfärg och arbeta in med en sked. Rulla rullarna i sockret.</li>
@@ -66,7 +73,7 @@
           <li>Grädda mitt i ugnen ca 10 minuter, låt kakorna svalna på plåten.</li>
         </ol>
       </article>
-
+      <!-- Resterande recept följer samma grundstruktur som det första receptet. Vissa recept innehåller även extra instruktioner, till exemepl garnering, bildtext eller annan information som är specifik för recpetet. -->
       <article id="chokladsnittar">
         <h2>Chokladsnittar</h2>
 
@@ -227,6 +234,7 @@
           <li>200 g osaltat smör</li>
           <li>1 dl strösocker</li>
           <li>4,5 dl vetemjöl</li>
+          <!-- <strong> används för att markera viktigt information om vilka ingredienser som höt till den ljusa respektive mörka degen. -->
           <li><strong>Ljus deg:</strong> 2 tsk vaniljsocker</li>
           <li><strong>Mörk deg:</strong> 2 msk kakao</li>
         </ul>
@@ -245,11 +253,10 @@
           <li>Lägg kakorna på en plåt med bakplåtspapper och grädda mitt i ugnen i ca 8-10 minuter.</li>
         </ol>
       </article>
-
     </main>
  
     <footer>
-      <p>&copy; 2026 Tindra Byström.</p>
+      <p>Webbsida skapad som en del av en skoluppgift.</p>
     </footer>
 
   </body>
