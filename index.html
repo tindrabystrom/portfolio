@@ -1,27 +1,28 @@
-<!-- Anger att dokumentet är skrivet enligt HTML5. -->
+<!-- <DOCTYPE html> anger att dokumentet är skrivet enligt HTML5 och <html> är rotelement som omfattar hela html-koden. Attributen lang="sv" anger att sidans huvudsakliga språk är svenska. -->
 <!DOCTYPE html>
-<!-- <html> är rotelement som omfattar hela html-koden. Attributen lang="sv" anger att sidans huvudsakliga språk är svenska. -->
 <html lang="sv">
-  <!-- <head> innehåller information om dokumentet som inte är en del av sidans synliga innehåll. -->
+
+  <!-- Dokumenthuvudet innehåller grundläggande information om sidan. Här anges teckenuppsättningen utf-8, som stöd för bland annat de svenska tecken å,ä och ö, samt sidans <title> som visas i webblärsarens flik. -->
  <head>
-  <!-- <meta> är ett tomt element som ger information om html-dokuemntet. Attributen charset talar om att dokumentet använder teckenuppsättning utf=8 som har stöd för bland annat å,ä och ö. -->
    <meta charset="utf-8">
-   <!-- <title> anger dokumentets titel som visas på webbläsarens flik. -->
    <title>Sju sorters kakor</title>
  </head>
-<!-- <body> omfattar webbsidans synliga innehåll.-->
+
+  <!-- <body> omfattar webbsidans synliga innehåll.-->
   <body>
-    <!-- <header> innehåller webbsidans inledande innehåll och huvudrubrik.-->
+     <!-- <header> samlar sidans inledande innehåll med huvudrubrik, introduktionsbild och introduktion till traditionen sju sorters kakor.-->
     <header>
-      <!-- <h1> används för webbsidans huvudrubrik. -->
+      <!-- Webbsidans huvudrubrik. -->
       <h1>Sju sorters kakor</h1>
       <!-- <img> visar en bild på webbsidan. Attributnamnet src ger sökvägen till bilden och alt-texten ger en beskrivning av bilden för ökad tillgänglighet.-->
       <img src="assets/images/ingredienser.jpg" alt="Bakingredienser med mjöl, smör och ägg bredvid en kavel">
-      <!-- <p> används för sidans introducerade textstycke. -->
+      
+      <!-- Introduktionen är uppdelad i två textstycken som presenterar traditionen och sidans innehåll. -->
       <p>Att bjuda på sju sorters kakor är en klassisk svensk fikatradition och syftar på det minsta antalet kaksorter som etiketten tidigare föreskrev att kakfatet ska innehålla. Tanken är att erbjuda ett varierat urval av småkakor så att det finns något för olika smaker: spröda, mjuka, chokladiga, kryddiga och fruktiga kakor. Utöver småkakorna serveras även vetebröd och tårta. Traditionen förknippas ofta med kafferep och högtider men passar lika bra till vardagsfika eller kalas och har funnits sedan 1800-talet.</p>
       <p>På den här sidan finns recept på sju småkakor att prova på!</p>
     </header>
-    <!-- <nav> innehåller webbsidans navigation till recepten. Recepten placeras i en oordnad lista med <ul>. Varje <li> används för varje recept i listan som innehåller <a> elementet för att skapa en klickbar länk och href visar vilket id på sidan respektive länk ledet till. -->
+
+    <!-- <nav> innehåller webbsidans huvudnavigation till recepten. Recepten placeras i en oordnad lista med <ul>. Varje <li> används för varje recept i listan som innehåller <a> elementet för att skapa en klickbar länk och href visar vilket id som receptet har längre ner på sidan. -->
     <nav>
       <!-- <h2> används för navigationens rubrik. -->
      <h2>Välj en kaka</h2>
@@ -35,20 +36,24 @@
        <li><a href="#schackrutor">Schackrutor</a></li>
      </ul>
     </nav>
-    <!-- <main> innehåller webbsidans huvudsakliga innehåll, som består av kakrecepten. -->
+    
+    <!-- <main> innehåller webbsidans huvudsakliga innehåll, som består av kakrecepten. Varje recept ligger i en egen article eftersom det är ett självständigt innehåll som ska kunna förstås för sig. -->
     <main>
-      <!--Receptet brysselkex är utifrån recept från ICA: https://www.ica.se/recept/brysselkex-433625/ -->
-      <!-- <article> används för att samla varje recept som ett eget fristående innehåll. Attributen id ger receptet ett unik id som navigationenes länkar leder till. -->
+      <!-- Här kommer första receptet brysselkex. id:t "brysselkex" kopplar receptet till länken för Brysselkex i huvudnavigationen. -->
+      <!-- Källa till receptet: https://www.ica.se/recept/brysselkex-433625/ -->
       <article id="brysselkex">
         <h2>Brysselkex</h2>
-        <!-- <figure> samlar bilden och den tillhörande bildtexten. <figcaption> användas för att ange att bilden är AI-genererad. -->
+
+        <!-- <figure> samlar bilden och den tillhörande bildtexten. <figcaption> används för att ange att bilden är AI-genererad. -->
         <figure>
           <img src="assets/images/brysselkex.jpg" alt="Brysselkex med sockerkant">
           <figcaption>AI-genererad bild</figcaption>
         </figure>
+
         <!-- <p> används för receptets beskrivande text. Ett stycke beskriver kakan och ett separat stycke anger hur många kakor receptet ger. -->
         <p>Brysselkex är klassiska småkakor med vaniljsmak och en dekorativ sockerkant. Kakorna formas som en rulle och skärs i skivor före gräddning.</p>
         <p>Antal: 40 kakor</p>
+
         <!-- <h3> används för underrubriker inom receptet. Ingredienserna placeras i en oordnad lista med <ul> eftersom de inte behöver följas i en bestämd ordning. Varje <li> innehåller en ingrediens.-->
         <h3>Ingredienser</h3>
         <ul>
@@ -59,14 +64,15 @@
           <li>1 msk vatten</li>
         </ul>
 
+        <!-- Garnering håller samma struktur som ingredienser, men hålls separat för att tydliggöra vad som används till kakornas garnering.-->
         <h3>Garnering</h3>
         <ul>
           <li>strösocker</li>
           <li>röd hushållsfärg (några droppar)</li>
         </ul>
 
+         <!-- Samma struktur som tidigare men <ol> används eftersom instruktionerna ska följa en bestämd ordning. Varje <li> innehåller ett steg i receptet. -->
         <h3>Gör så här</h3>
-        <!-- <ol> används för instruktionerna eftersom stegen ska följa en bestämt ordning. Varje <li> innehåller ett steg i receptet. -->
         <ol>
           <li>Sätt ugnen på 175°C</li>
           <li>Hacka samman ingredienserna till degen. Forma degen till rullar, drygt 4 cm i diameter. Häll ut strösocker på ett smörpapper, häll på några droppar röd hushållsfärg och arbeta in med en sked. Rulla rullarna i sockret.</li>
@@ -74,11 +80,15 @@
           <li>Grädda mitt i ugnen ca 10 minuter, låt kakorna svalna på plåten.</li>
         </ol>
       </article>
-      <!-- Resterande recept följer samma grundstruktur som det första receptet. Vissa recept innehåller även extra instruktioner, till exemepl garnering, bildtext eller annan information som är specifik för recpetet. -->
-      <!--Receptet chokladsnittar är utifrån recept från ICA: https://www.ica.se/recept/chokladsnittar-2131/ -->
+
+      <!-- Resterande recept följer samma grundstruktur som det första receptet. Vissa recept innehåller även extra delar, till exemepl garnering, bildtext eller annan information som är specifik för recpetet. -->
+      
+      <!-- Här börjar receptet chokladsnittar.-->
+      <!-- Källa till receptet: https://www.ica.se/recept/chokladsnittar-2131/ -->
       <article id="chokladsnittar">
         <h2>Chokladsnittar</h2>
 
+        <!-- Receptbilden är AI-genererad och bildtexten anger detta.-->
         <figure>
           <img src="assets/images/chokladsnittar.jpg" alt="Chokladsnittar med pärlsocker">
           <figcaption>AI-genererad bild</figcaption>
@@ -96,11 +106,13 @@
           <li>1 stort ägg</li>
           <li>200 g rumsvarmt smör eller margarin</li>
         </ul>
+
         <h3>Garnering</h3>
         <ul>
           <li>1 uppvispat ägg</li>
           <li>pärlsocker</li>
         </ul>
+
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 175°C, över- och undervärme.</li>
@@ -110,11 +122,13 @@
         </ol>
       </article>
 
+      <!-- Här börjar receptet drömmar. -->
       <article id="drommar">
         <h2>Drömmar</h2>
         <img src="assets/images/drommar.jpg" alt="Drömmar, spröda småkakor med vaniljsmak">
         <p>Drömmar är mycket spröda småkakor med mild vaniljsmak som är lätta att baka. Hjorthornssalt gör att kakorna får sin karakteristiskt porösa och ljuvligt frasiga konsistens.</p>
         <p>Antal: 40-45 kakor</p>
+        
         <h3>Ingredienser</h3>
         <ul>
           <li>100 g smör</li>
@@ -124,6 +138,7 @@
           <li>1 tsk hjorthornssalt</li>
           <li>4 dl vetemjöl</li>
         </ul>
+        
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 150 °C.</li>
@@ -135,11 +150,13 @@
         </ol>
       </article>
 
+      <!-- Här börjar receptet finska pinnar. -->
       <article id="finska-pinnar">
         <h2>Finska pinnar</h2>
         <img src="assets/images/finska-pinnar.jpg" alt="Mandlar i en skål">
         <p>Finska pinnar är spröda mördegskakor med mandel och pärlsocker på toppen. Trots namnet är de en välkänd klassiker på svenska kakfat.</p>
         <p>Antal: ca 60 kakor</p>
+        
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g smör</li>
@@ -149,10 +166,12 @@
           <li>1 dl mandelmjöl</li>
           <li>1 äggvita</li>
         </ul>
+        
         <h3>Garnering</h3>
         <ul>
           <li>ca 1 dl hackad sötmandel och 2 msk pärlsocker</li>
         </ul>
+        
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 175 °C.</li>
@@ -165,9 +184,11 @@
         </ol>
       </article>
 
+      <!-- Här börjar receptet hallongrottor. -->
       <article id="hallongrottor">
         <h2>Hallongrottor</h2>
         
+        <!-- Receptbilden är AI-genererad och bildtexten anger detta. -->
         <figure>
           <img src="assets/images/hallongrottor.jpg" alt="Hallongrottor med hallonsylt på ett kakfat">
           <figcaption>AI-genererad bild</figcaption>
@@ -175,6 +196,7 @@
 
         <p>Hallongrottor är mördegskakor med en liten grop fylld med ljuvlig hallonsylt. De är både enkla att baka och uppskattade på kakfatet.</p>
         <p>Antal: 20-24 kakor</p>
+       
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g smör eller margarin</li>
@@ -184,6 +206,7 @@
           <li>1 tsk bakpulver</li>
           <li>1 dl fast hallonsylt</li>
         </ul>
+        
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 200 °C.</li>
@@ -195,9 +218,11 @@
         </ol>
       </article>
 
+      <!-- Här börjar receptet kolasnittar. -->
       <article id="kolasnittar">
         <h2>Kolasnittar</h2>
 
+        <!-- Receptbilden är AI-genererad och bildtexten anger detta. -->
         <figure>
           <img src="assets/images/kolasnittar.jpg" alt="Kolasnittar upplagda på ett kakfat">
           <figcaption>AI-genererad bild</figcaption>
@@ -205,6 +230,7 @@
         
         <p>Kolasnittar är avlånga lite sega småkakor med smak av sirap och vanilj. De skärs i sneda bitar direkt när de kommer ut ur ugnen.</p>
         <p>Antal: 20 kakor</p>
+       
         <h3>Ingredienser</h3>
         <ul>
           <li>100 g smör</li>
@@ -214,6 +240,7 @@
           <li>1 tsk bakpulver</li>
           <li>1 tsk vaniljsocker</li>
         </ul>
+       
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 175 °C.</li>
@@ -226,20 +253,23 @@
         </ol>
       </article>
 
+      <!-- Här börjar det sista receptet, schackrutor.-->
       <article id="schackrutor">
         <h2>Schackrutor</h2>
         <img src="assets/images/schackrutor.jpg" alt="Person som knådar en brun kakdeg">
         <p>Schackrutor är klassiska småkakor med ett dekorativt rutmönster av ljus och chokladsmakande mördeg. Kakorna blir spröda och ser mycket läckra ut på kakfatet. De imponerar med sitt utseende men är väldigt enkla att baka.</p>
         <p>Antal: ca 50 kakor</p>
+       
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g osaltat smör</li>
           <li>1 dl strösocker</li>
           <li>4,5 dl vetemjöl</li>
-          <!-- <strong> används för att markera viktigt information om vilka ingredienser som hör till den ljusa respektive mörka degen. -->
+          <!-- <strong> används för att markera viktig information om vilka ingredienser som hör till den ljusa respektive mörka degen. -->
           <li><strong>Ljus deg:</strong> 2 tsk vaniljsocker</li>
           <li><strong>Mörk deg:</strong> 2 msk kakao</li>
         </ul>
+       
         <h3>Gör så här</h3>
         <ol>
           <li>Ta fram smöret så att det hinner bli rumsvarmt.</li>
@@ -256,9 +286,10 @@
         </ol>
       </article>
     </main>
-    <!-- <footer> används för sidan avslutade inenhåll. -->
+
+    <!-- Sidfoten avslutar webbsidan och innehåller information om vem som har skapat sidan. -->
     <footer>
-      <p>Webbsidan är skapad av Tindra Byström.</p>
+      <p>Webbsidan är skapad av Tindra Byström, 2026.</p>
     </footer>
 
   </body>
