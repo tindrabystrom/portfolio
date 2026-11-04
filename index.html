@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="sv">
 <!-- <!DOCTYPE html> anger att dokumentet är skrivet enligt HTML5 och <html> är rotelement som omfattar hela html-koden. Attributet lang="sv" anger att sidans huvudsakliga språk är svenska. -->
-<!-- Dokumenthuvudet innehåller grundläggande information om sidan. Här anges teckenuppsättningen utf-8, som har stöd för bland annat de svenska tecken å, ä och ö, samt sidans <title> som visas i webbläsarens flik. -->
- <head>
-   <meta charset="utf-8">
-   <title>Sju sorters kakor</title>
-   <link rel="stylesheet" href="assets/css/style.css">
 
+<!-- Dokumenthuvudet innehåller grundläggande information om sidan. Här anges teckenuppsättningen utf-8, som har stöd för bland annat de svenska tecken, samt sidans <title> som visas i webbläsarens flik. -->
+ <head>
+  <meta charset="utf-8">
+  <title>Sju sorters kakor</title>
+ </head>
+   
   <!-- <body> omfattar webbsidans synliga innehåll.-->
   <body>
      <!-- <header> samlar sidans inledande innehåll med huvudrubrik, introduktionsbild och introduktion till traditionen sju sorters kakor.-->
     <header>
       <h1>Sju sorters kakor</h1>
-      <!-- <img> visar en bild på webbsidan. Bildens src ger sökvägen till bilden, alt-texten beskriver bilden för ökad tillgänglighet och width och height anger bildens dimensioner så att rätt utrymme kan reserveras medan bilden laddas.-->
-      <img src="assets/images/ingredienser.jpg" alt="Bakingredienser med mjöl, smör och ägg bredvid en kavel" width="400" height="533">
+      <!-- Introduktionsbild med beskrivande alt-text för ökad tillgänlighet. Bildmåtten anges för att reservera plats vid laddning av bilden.-->
+      <figure>
+        <img src="assets/images/ingredienser.jpg" alt="Bakingredienser med mjöl, smör och ägg bredvid en kavel" width="400" height="533">
+      </figure>
       
       <!-- Introduktionen är uppdelad i två textstycken som presenterar traditionen och sidans innehåll. -->
       <p>Att bjuda på sju sorters kakor är en klassisk svensk fikatradition och syftar på det minsta antalet kaksorter som etiketten tidigare föreskrev att kakfatet ska innehålla. Tanken är att erbjuda ett varierat urval av småkakor så att det finns något för olika smaker: spröda, mjuka, chokladiga, kryddiga och fruktiga kakor. Utöver småkakorna serveras även vetebröd och tårta. Traditionen förknippas ofta med kafferep och högtider men passar lika bra till vardagsfika eller kalas och har funnits sedan 1800-talet.</p>
       <p>På den här sidan finns recept på sju småkakor att prova på!</p>
     </header>
 
-    <!-- <nav> innehåller webbsidans huvudnavigation till recepten. Recepten placeras i en oordnad lista med <ul>. Varje <li> används för varje recept i listan som innehåller <a> elementet för att skapa en klickbar länk och href visar vilket id som receptet har längre ner på sidan. -->
-    <nav>
+    <!-- Huvudnavigation med lista av länkar till recepten. Länkarna motsvarar receptens id-attribut. -->
+    <nav id="toppen">
       <!-- <h2> används för navigationens rubrik. -->
      <h2>Välj en kaka</h2>
      <ul>
@@ -52,7 +55,7 @@
         <p>Brysselkex är klassiska småkakor med vaniljsmak och en dekorativ sockerkant. Kakorna formas som en rulle och skärs i skivor före gräddning.</p>
         <p>Antal: 40 kakor</p>
 
-        <!-- <h3> används för underrubriker inom receptet. Ingredienserna placeras i en oordnad lista med <ul> eftersom de inte behöver följas i en bestämd ordning. Varje <li> innehåller en ingrediens.-->
+        <!-- <h3> används för underrubriker inom receptet. Ingredienserna visas i en oordnad lista eftersom ordningen inte har betydelse.-->
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g smör</li>
@@ -77,6 +80,7 @@
           <li>Lägg rullarna kallt i 30 minuter. Skär dem i skivor och lägg kakorna på bakplåtspappersklädd plåt.</li>
           <li>Grädda mitt i ugnen ca 10 minuter, låt kakorna svalna på plåten.</li>
         </ol>
+        <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
 
       <!-- Resterande recept följer samma grundstruktur som det första receptet. Vissa recept innehåller även extra delar, till exempel garnering, bildtext eller annan information som är specifik för receptet. -->
@@ -118,12 +122,15 @@
           <li>Arbeta degen smidig. Rulla ut till 5 längder (för 60 st), lika långa som en plåt. Fördela längderna på två plåtar. Platta till dem lite. Pensla med uppvispat ägg och strö på pärlsocker.</li>
           <li>Grädda i 10-12 minuter. Skär längderna i bitar lite på snedden när de fortfarande är varma.</li>
         </ol>
+        <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
 
       <!-- Här börjar receptet drömmar. -->
       <article id="drommar">
         <h2>Drömmar</h2>
-        <img src="assets/images/drommar.jpg" alt="Drömmar, spröda småkakor med vaniljsmak" width="350" height="467">
+        <figure>
+          <img src="assets/images/drommar.jpg" alt="Drömmar, spröda småkakor med vaniljsmak" width="350" height="467">
+        </figure>
         <p>Drömmar är mycket spröda småkakor med mild vaniljsmak som är lätta att baka. Hjorthornssalt gör att kakorna får sin karakteristiskt porösa och ljuvligt frasiga konsistens.</p>
         <p>Antal: 40-45 kakor</p>
         
@@ -146,12 +153,15 @@
           <li>Rulla små bollar av degen och lägg dem på plåtar med bakplåtspapper.</li>
           <li>Grädda mitt i ugnen i cirka 15-20 minuter och låt kallna på plåten.</li>
         </ol>
+        <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
 
       <!-- Här börjar receptet finska pinnar. -->
       <article id="finska-pinnar">
         <h2>Finska pinnar</h2>
-        <img src="assets/images/finska-pinnar.jpg" alt="Mandlar i en skål" width="550" height="367">
+        <figure>
+          <img src="assets/images/finska-pinnar.jpg" alt="Mandlar i en skål" width="550" height="367">
+        </figure>
         <p>Finska pinnar är spröda mördegskakor med mandel och pärlsocker på toppen. Trots namnet är de en välkänd klassiker på svenska kakfat.</p>
         <p>Antal: ca 60 kakor</p>
         
@@ -180,6 +190,7 @@
           <li>Strö över hackad mandel och pärlsocker och dela längderna i ca 4 cm långa bitar. Sära bitarna lite så att de inte fastnar i varandra.</li>
           <li>Grädda mitt i ugnen i cirka 10-12 minuter.</li>
         </ol>
+        <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
 
       <!-- Här börjar receptet hallongrottor. -->
@@ -214,6 +225,7 @@
           <li>Fyll groparna med hallonsylt.</li>
           <li>Grädda i cirka 12-15 minuter och låt sedan svalna på galler.</li>
         </ol>
+        <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
 
       <!-- Här börjar receptet kolasnittar. -->
@@ -249,12 +261,15 @@
           <li>Grädda mitt i ugnen cirka 12 minuter.</li>
           <li>Låt kakorna svalna något och skär längderna i sneda bitar medan de fortfarande är varma.</li>
         </ol>
+        <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
 
       <!-- Här börjar det sista receptet, schackrutor.-->
       <article id="schackrutor">
         <h2>Schackrutor</h2>
-        <img src="assets/images/schackrutor.jpg" alt="Person som knådar en brun kakdeg" width="550" height="367">
+        <figure>
+          <img src="assets/images/schackrutor.jpg" alt="Person som knådar en brun kakdeg" width="550" height="367">
+        </figure>
         <p>Schackrutor är klassiska småkakor med ett dekorativt rutmönster av ljus och chokladsmakande mördeg. Kakorna blir spröda och ser mycket läckra ut på kakfatet. De imponerar med sitt utseende men är väldigt enkla att baka.</p>
         <p>Antal: ca 50 kakor</p>
        
@@ -282,6 +297,7 @@
           <li>Ta fram längden och skär ca 3-4 mm tjocka skivor.</li>
           <li>Lägg kakorna på en plåt med bakplåtspapper och grädda mitt i ugnen i ca 8-10 minuter.</li>
         </ol>
+        <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
     </main>
 
