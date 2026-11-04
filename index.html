@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="sv">
-<!-- <!DOCTYPE html> anger att dokumentet är skrivet enligt HTML5 och <html> är rotelement som omfattar hela html-koden. Attributet lang="sv" anger att sidans huvudsakliga språk är svenska. -->
+<!-- <!DOCTYPE html> anger att dokumentet är skrivet enligt HTML5. -->
+<!-- <html> är rotelement som omfattar hela html-koden. Attributet lang="sv" anger att sidans huvudsakliga språk är svenska. -->
 
-<!-- Dokumenthuvudet innehåller grundläggande information om sidan. Här anges teckenuppsättningen utf-8, som har stöd för bland annat de svenska tecken, samt sidans <title> som visas i webbläsarens flik. -->
+<!-- Dokumenthuvudet innehåller grundläggande information om sidan. UTF-8 stöder svenska tecken som å, ä och ö. <title> anger texten i webbläsarens flik. -->
  <head>
   <meta charset="utf-8">
   <title>Sju sorters kakor</title>
@@ -13,7 +14,7 @@
      <!-- <header> samlar sidans inledande innehåll med huvudrubrik, introduktionsbild och introduktion till traditionen sju sorters kakor.-->
     <header>
       <h1>Sju sorters kakor</h1>
-      <!-- Introduktionsbild med beskrivande alt-text för ökad tillgänlighet. Bildmåtten anges för att reservera plats vid laddning av bilden.-->
+      <!-- <figure> används för bilderna. Alla bilder har alt-text för tillgänlighet och mått för att reservera plats. -->
       <figure>
         <img src="assets/images/ingredienser.jpg" alt="Bakingredienser med mjöl, smör och ägg bredvid en kavel" width="400" height="533">
       </figure>
@@ -23,7 +24,7 @@
       <p>På den här sidan finns recept på sju småkakor att prova på!</p>
     </header>
 
-    <!-- Huvudnavigation med lista av länkar till recepten. Länkarna motsvarar receptens id-attribut. -->
+    <!-- Huvudnavigation med lista av länkar till recepten. id="toppen" gör det möjligt att länka tillbaka till menyn. -->
     <nav id="toppen">
       <!-- <h2> används för navigationens rubrik. -->
      <h2>Välj en kaka</h2>
@@ -38,14 +39,14 @@
      </ul>
     </nav>
     
-    <!-- <main> innehåller webbsidans huvudsakliga innehåll, som består av kakrecepten. Varje recept ligger i en egen article eftersom det är ett självständigt innehåll som ska kunna förstås för sig. -->
+    <!-- <main> innehåller webbsidans huvudsakliga innehåll, som består av kakrecepten. Varje recept ligger i en egen article eftersom det är ett självständigt innehåll. -->
     <main>
-      <!-- Här kommer första receptet brysselkex. id:t "brysselkex" kopplar receptet till länken för Brysselkex i huvudnavigationen. -->
+      <!-- Här kommer första receptet brysselkex. id-attributet kopplar receptet till länken i huvudnavigationen. -->
       <!-- Receptet är hämtad från ICA. Beskrivningen av kakan är omformulerad med egna ord: https://www.ica.se/recept/brysselkex-433625/ -->
       <article id="brysselkex">
         <h2>Brysselkex</h2>
 
-        <!-- <figure> samlar bilden och den tillhörande bildtexten. <figcaption> används för att ange att bilden är AI-genererad. -->
+        <!-- <figcaption> används för att ange att bilden är AI-genererad. -->
         <figure>
           <img src="assets/images/brysselkex.jpg" alt="Brysselkex med sockerkant" width="500" height="333">
           <figcaption>AI-genererad bild</figcaption>
@@ -80,6 +81,7 @@
           <li>Lägg rullarna kallt i 30 minuter. Skär dem i skivor och lägg kakorna på bakplåtspappersklädd plåt.</li>
           <li>Grädda mitt i ugnen ca 10 minuter, låt kakorna svalna på plåten.</li>
         </ol>
+        <!-- Länk leder tillbaka till receptmenyn via id="toppen". -->
         <p><a href="#toppen">Välj en annan kaka</a></p>
       </article>
 
@@ -89,8 +91,6 @@
       <!-- Receptet är hämtad från ICA. Beskrivningen av kakan är omformulerad med egna ord: https://www.ica.se/recept/chokladsnittar-2131/ -->
       <article id="chokladsnittar">
         <h2>Chokladsnittar</h2>
-
-        <!-- Receptbilden är AI-genererad och bildtexten anger detta.-->
         <figure>
           <img src="assets/images/chokladsnittar.jpg" alt="Chokladsnittar med pärlsocker" width="450" height="300">
           <figcaption>AI-genererad bild</figcaption>
@@ -159,6 +159,7 @@
       <!-- Här börjar receptet finska pinnar. -->
       <article id="finska-pinnar">
         <h2>Finska pinnar</h2>
+
         <figure>
           <img src="assets/images/finska-pinnar.jpg" alt="Mandlar i en skål" width="550" height="367">
         </figure>
@@ -196,8 +197,7 @@
       <!-- Här börjar receptet hallongrottor. -->
       <article id="hallongrottor">
         <h2>Hallongrottor</h2>
-        
-        <!-- Receptbilden är AI-genererad och bildtexten anger detta. -->
+
         <figure>
           <img src="assets/images/hallongrottor.jpg" alt="Hallongrottor med hallonsylt på ett kakfat" width="450" height="450">
           <figcaption>AI-genererad bild</figcaption>
@@ -232,7 +232,6 @@
       <article id="kolasnittar">
         <h2>Kolasnittar</h2>
 
-        <!-- Receptbilden är AI-genererad och bildtexten anger detta. -->
         <figure>
           <img src="assets/images/kolasnittar.jpg" alt="Kolasnittar upplagda på ett kakfat" width="600" height="400">
           <figcaption>AI-genererad bild</figcaption>
