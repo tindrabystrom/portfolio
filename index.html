@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="sv">
-<!-- <!DOCTYPE html> anger att dokumentet är skrivet enligt HTML5. -->
-<!-- <html> är rotelement som omfattar hela html-koden. Attributet lang="sv" anger att sidans huvudsakliga språk är svenska. -->
+  <!-- <!DOCTYPE html> anger att dokumentet är skrivet enligt HTML5. -->
+  <!-- <html> är rotelement som omfattar hela html-koden. Attributet lang="sv" anger att sidans huvudsakliga språk är svenska. -->
 
-<!-- Dokumenthuvudet innehåller information om sidan. UTF-8 stöder svenska tecken och <title> anger texten i webbläsarens flik. -->
- <head>
-  <meta charset="utf-8">
-  <title>Sju sorters kakor</title>
-  <!-- Sju sortets kakor CSS. -->
-  <link rel="stylesheet" href="assets/css/style.css">
- </head>
-   
+  <!-- Dokumenthuvudet innehåller information om sidan. UTF-8 stöder svenska tecken och <title> anger texten i webbläsarens flik. -->
+  <head>
+    <meta charset="utf-8">
+    <title>Sju sorters kakor</title>
+    <!-- Sju sortets kakor CSS. -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
   <!-- <body> omfattar webbsidans synliga innehåll.-->
   <body>
-     <!-- <header> samlar sidans inledande innehåll med huvudrubrik, introduktionsbild och introduktion till traditionen sju sorters kakor.-->
+    <!-- <header> samlar sidans inledande innehåll med huvudrubrik, introduktionsbild och introduktion till traditionen sju sorters kakor.-->
     <header>
       <h1 class="intro">Sju sorters kakor</h1>
       <!-- <figure> används för bilderna. Alla bilder har alt-text för tillgänglighet och mått för att reservera plats. -->
       <figure>
-        <img src="assets/images/ingredienser.jpg" alt="Bakingredienser med mjöl, smör och ägg bredvid en kavel" width="500" height="667">
+        <img class="intro-bild" src="assets/images/ingredienser.jpg" alt="Bakingredienser med mjöl, smör och ägg bredvid en kavel" width="500" height="667">
       </figure>
-      
+
       <!-- Introduktionen är uppdelad i två textstycken som presenterar traditionen och sidans innehåll. -->
       <p class="intro-text">Att bjuda på sju sorters kakor är en klassisk svensk fikatradition och syftar på det minsta antalet kaksorter som etiketten tidigare föreskrev att kakfatet ska innehålla. Tanken är att erbjuda ett varierat urval av småkakor så att det finns något för olika smaker: spröda, mjuka, chokladiga, kryddiga och fruktiga kakor. Utöver småkakorna serveras även vetebröd och tårta. Traditionen förknippas ofta med kafferep och högtider men passar lika bra till vardagsfika eller kalas och har funnits sedan 1800-talet.</p>
       <p class="intro-text">På den här sidan finns recept på sju småkakor att prova på!</p>
     </header>
 
     <!-- Huvudnavigation med lista av länkar till recepten. id="toppen" gör det möjligt att länka tillbaka till menyn. -->
-    <nav class="navigation" id="toppen">
+    <nav id="toppen">
       <!-- <h2> används för navigationens rubrik. -->
-     <h2>Välj en kaka</h2>
-     <ul class="navigation-links">
-       <li><a href="#brysselkex">Brysselkex</a></li>
-       <li><a href="#chokladsnittar">Chokladsnittar</a></li>
-       <li><a href="#drommar">Drömmar</a></li>
-       <li><a href="#finska-pinnar">Finska pinnar</a></li>
-       <li><a href="#hallongrottor">Hallongrottor</a></li>
-       <li><a href="#kolasnittar">Kolasnittar</a></li>
-       <li><a href="#schackrutor">Schackrutor</a></li>
-     </ul>
+      <h2>Välj en kaka</h2>
+      <ul>
+        <li><a href="#brysselkex">Brysselkex</a></li>
+        <li><a href="#chokladsnittar">Chokladsnittar</a></li>
+        <li><a href="#drommar">Drömmar</a></li>
+        <li><a href="#finska-pinnar">Finska pinnar</a></li>
+        <li><a href="#hallongrottor">Hallongrottor</a></li>
+        <li><a href="#kolasnittar">Kolasnittar</a></li>
+        <li><a href="#schackrutor">Schackrutor</a></li>
+      </ul>
     </nav>
-    
+
     <!-- <main> innehåller webbsidans huvudsakliga innehåll, som består av kakrecepten. Varje recept ligger i en egen article eftersom det är ett självständigt innehåll. -->
     <main>
       <!-- Här kommer första receptet brysselkex. id-attributet kopplar receptet till länken i huvudnavigationen. -->
@@ -75,7 +75,7 @@
           <li>röd hushållsfärg (några droppar)</li>
         </ul>
 
-         <!-- Samma struktur som tidigare men <ol> används eftersom instruktionerna ska följa en bestämd ordning. Varje <li> innehåller ett steg i receptet. -->
+        <!-- Samma struktur som tidigare men <ol> används eftersom instruktionerna ska följa en bestämd ordning. Varje <li> innehåller ett steg i receptet. -->
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 175°C</li>
@@ -88,7 +88,7 @@
       </article>
 
       <!-- Resterande recept följer samma grundstruktur som det första receptet. Vissa recept innehåller även extra delar, till exempel garnering, bildtext eller annan information som är specifik för receptet. -->
-      
+
       <!-- Här börjar receptet chokladsnittar.-->
       <!-- Receptet är hämtat från ICA. Beskrivningen av kakan är omformulerad med egna ord: https://www.ica.se/recept/chokladsnittar-2131/ -->
       <article id="chokladsnittar">
@@ -135,7 +135,7 @@
         </figure>
         <p>Drömmar är mycket spröda småkakor med mild vaniljsmak som är lätta att baka. Hjorthornssalt gör att kakorna får sin karakteristiskt porösa och ljuvligt frasiga konsistens.</p>
         <p>Antal: 40-45 kakor</p>
-        
+
         <h3>Ingredienser</h3>
         <ul>
           <li>100 g smör</li>
@@ -145,7 +145,7 @@
           <li>1 tsk hjorthornssalt</li>
           <li>4 dl vetemjöl</li>
         </ul>
-        
+
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 150 °C.</li>
@@ -167,7 +167,7 @@
         </figure>
         <p>Finska pinnar är spröda mördegskakor med mandel och pärlsocker på toppen. Trots namnet är de en välkänd klassiker på svenska kakfat.</p>
         <p>Antal: ca 60 kakor</p>
-        
+
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g smör</li>
@@ -177,12 +177,12 @@
           <li>1 dl mandelmjöl</li>
           <li>1 äggvita</li>
         </ul>
-        
+
         <h3>Garnering</h3>
         <ul>
           <li>ca 1 dl hackad sötmandel och 2 msk pärlsocker</li>
         </ul>
-        
+
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 175 °C.</li>
@@ -207,7 +207,7 @@
 
         <p>Hallongrottor är mördegskakor med en liten grop fylld med ljuvlig hallonsylt. De är både enkla att baka och uppskattade på kakfatet.</p>
         <p>Antal: 20-24 kakor</p>
-       
+
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g smör eller margarin</li>
@@ -217,7 +217,7 @@
           <li>1 tsk bakpulver</li>
           <li>1 dl fast hallonsylt</li>
         </ul>
-        
+
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 200 °C.</li>
@@ -238,10 +238,10 @@
           <img src="assets/images/kolasnittar.jpg" alt="Kolasnittar upplagda på ett kakfat" width="600" height="400">
           <figcaption>AI-genererad bild</figcaption>
         </figure>
-        
+
         <p>Kolasnittar är avlånga lite sega småkakor med smak av sirap och vanilj. De skärs i sneda bitar direkt när de kommer ut ur ugnen.</p>
         <p>Antal: 20 kakor</p>
-       
+
         <h3>Ingredienser</h3>
         <ul>
           <li>100 g smör</li>
@@ -251,7 +251,7 @@
           <li>1 tsk bakpulver</li>
           <li>1 tsk vaniljsocker</li>
         </ul>
-       
+
         <h3>Gör så här</h3>
         <ol>
           <li>Sätt ugnen på 175 °C.</li>
@@ -273,7 +273,7 @@
         </figure>
         <p>Schackrutor är klassiska småkakor med ett dekorativt rutmönster av ljus och chokladsmakande mördeg. Kakorna blir spröda och ser mycket läckra ut på kakfatet. De imponerar med sitt utseende men är väldigt enkla att baka.</p>
         <p>Antal: ca 50 kakor</p>
-       
+
         <h3>Ingredienser</h3>
         <ul>
           <li>200 g osaltat smör</li>
@@ -283,7 +283,7 @@
           <li><strong>Ljus deg:</strong> 2 tsk vaniljsocker</li>
           <li><strong>Mörk deg:</strong> 2 msk kakao</li>
         </ul>
-       
+
         <h3>Gör så här</h3>
         <ol>
           <li>Ta fram smöret så att det hinner bli rumsvarmt.</li>
